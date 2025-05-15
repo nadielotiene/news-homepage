@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | News homepage</title>
@@ -23,15 +26,17 @@
     </div>
 
     <nav class="nav">
-      <div class="nav__list--div">
-        <ul class="menu__list">
-          <li class="nav__item"><a href="#" class="nav__link"></a>linkHome</li>
-          <li class="nav__item"><a href="#" class="nav__link"></a>linkNew</li>
-          <li class="nav__item"><a href="#" class="nav__link"></a>linkPopular</li>
-          <li class="nav__item"><a href="#" class="nav__link"></a>linkTrending</li>
-          <li class="nav__item"><a href="#" class="nav__link"></a>linkCategories</li>
-        </ul>
-      </div> 
+      <div class="container">
+        <div class="nav__list--div">
+          <ul class="menu__list">
+            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">New</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Popular</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Trending</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Categories</a></li>
+          </ul>
+        </div> 
+      </div>
     </nav>
   </header>
 
@@ -91,27 +96,33 @@
         <div class="top-news__img--div">
           <img src="assets/images/image-retro-pcs.jpg" alt="" class="top-news__img">
         </div>
-        <h2 class="top-news__numm">01</h2>
-        <h3 class="top-news__sub-title">Reviving Retro PCs</h3>
-        <p class="top-news__p">What happens when old PCs are given modern upgrades?</p>
+        <div class="top-news__info--div">
+          <h2 class="top-news__num">01</h2>
+          <h3 class="top-news__sub-title">Reviving Retro PCs</h3>
+          <p class="top-news__p">What happens when old PCs are given modern upgrades?</p>
+        </div>
       </article>
 
       <article class="top-news--card">
         <div class="top-news__img--div">
           <img src="assets/images/image-top-laptops.jpg" alt="" class="top-news__img">
         </div>
-        <h2 class="top-news__numm">02</h2>
-        <h3 class="top-news__sub-title">Top 10 Laptops of 2022</h3>
-        <p class="top-news__p">Our best picks for various needs and budgets.</p>
+        <div class="top-news__info--div">
+          <h2 class="top-news__num">02</h2>
+          <h3 class="top-news__sub-title">Top 10 Laptops of 2022</h3>
+          <p class="top-news__p">Our best picks for various needs and budgets.</p>
+        </div>
       </article>
 
       <article class="top-news--card">
         <div class="top-news__img--div">
           <img src="assets/images/image-gaming-growth.jpg" alt="" class="top-news__img">
         </div>
-        <h2 class="top-news__numm">03</h2>
-        <h3 class="top-news__sub-title">The Growth of Gaming</h3>
-        <p class="top-news__p">How the pandemic has sparked fresh opportunities.</p>
+        <div class="top-news__info--div">
+          <h2 class="top-news__num">03</h2>
+          <h3 class="top-news__sub-title">The Growth of Gaming</h3>
+          <p class="top-news__p">How the pandemic has sparked fresh opportunities.</p>
+        </div>
       </article>
     </div>
   </section>
