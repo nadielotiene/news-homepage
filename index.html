@@ -14,58 +14,64 @@
 
 
   <header class="header">
-    <div class="container">
+    <div class="container header--container">
       <div class="logo__img--div">
         <img src="assets/images/logo.svg" alt="website logo" class="logo__img">
       </div>
-
-      <div class="menu__icon--div">
-        <!-- <img src="assets/images/icon-menu.svg" alt="" class="menu__icon"> -->
-        <img src="assets/images/icon-menu-close.svg" alt="menu__icon-close">
+      
+      <div class="nav__toggle" aria-label="Toggle menu">
+          <!-- <div class="nav__toggle--div"> -->
+          <img src="assets/images/icon-menu.svg" alt="nav icon" class="menu__icon" id="menuIcon">
+        <!-- </div> -->
       </div>
+
+      <nav class="nav nav--mobile-hidden">
+        <div class="container nav--container">
+          <div class="nav__list--div">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">New</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Popular</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Trending</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Categories</a></li>
+            </ul>
+          </div> 
+        </div>
+      </nav>
     </div>
-
-    <nav class="nav">
-      <div class="container">
-        <div class="nav__list--div">
-          <ul class="menu__list">
-            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">New</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Popular</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Trending</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Categories</a></li>
-          </ul>
-        </div> 
-      </div>
-    </nav>
+    
   </header>
 
 
   <section class="hero">
     <div class="container">
       <div class="hero__image--div">
-        <img src="assets/images/image-web-3-mobile.jpg" alt="3D geometrical figures" class="hero__image">
-        <!-- <img src="assets/images/image-web-3-desktop.jpg" alt="3D geometrical figures" class="hero image"> -->
+        <picture>
+          <source srcset="assets/images/image-web-3-desktop.jpg" media="(min-width: 1080px)">
+          <img src="assets/images/image-web-3-mobile.jpg" alt="3D geometrical figures" class="hero__image">
+        </picture>
       </div>
     
-      <div class="title--div">
-        <h1 class="title">The Bright Future of Web 3.0?</h1>
-      </div>
+      <div class="hero__text--div">
+        <div class="title--div">
+          <h1 class="title">The Bright Future of Web 3.0?</h1>
+        </div>
 
-      <div class="p-btn--div">
-        <p class="header__p"> 
-          We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-          But is it really fulfilling its promise?
-        </p>
+        <div class="p-btn--div">
+          <p class="hero"> 
+            We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+            But is it really fulfilling its promise?
+          </p>
 
-        <a href="#" class="header__button">Read more</a>
+          <a href="#" class="header__button">Read more</a>
+        </div>
       </div>
     </div>
   </section>
 
 
   <section class="new-news--section">
-    <div class="container">
+    <div class="container new-news--container">
       <h2 class="new-news__title">New</h2>
     
       <article class="new-news--card">
@@ -91,10 +97,10 @@
 
 
   <section class="top-news--section">
-    <div class="container">
+    <div class="container top-news__cards--container">
       <article class="top-news--card">
         <div class="top-news__img--div">
-          <img src="assets/images/image-retro-pcs.jpg" alt="" class="top-news__img">
+          <img src="assets/images/image-retro-pcs.jpg" alt="miniature retro tech" class="top-news__img">
         </div>
         <div class="top-news__info--div">
           <h2 class="top-news__num">01</h2>
@@ -105,7 +111,7 @@
 
       <article class="top-news--card">
         <div class="top-news__img--div">
-          <img src="assets/images/image-top-laptops.jpg" alt="" class="top-news__img">
+          <img src="assets/images/image-top-laptops.jpg" alt="keycaps clode-up" class="top-news__img">
         </div>
         <div class="top-news__info--div">
           <h2 class="top-news__num">02</h2>
@@ -116,7 +122,7 @@
 
       <article class="top-news--card">
         <div class="top-news__img--div">
-          <img src="assets/images/image-gaming-growth.jpg" alt="" class="top-news__img">
+          <img src="assets/images/image-gaming-growth.jpg" alt="white PS4 controller falling into a hand" class="top-news__img">
         </div>
         <div class="top-news__info--div">
           <h2 class="top-news__num">03</h2>
@@ -133,6 +139,26 @@
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
 
+<script>
+  const toggleButton = document.querySelector(".nav__toggle");
+  const nav = document.querySelector(".nav");
+
+  toggleButton.addEventListener("click", () => {
+    nav.classList.toggle("nav--active");
+  });
+
+
+  const menuIcon = document.getElementById("menuIcon");
+  menuIcon.addEventListener("click", () => {
+    const currentSrc = menuIcon.getAttribute("src");
+    if (currentSrc.includes("icon-menu.svg")) {
+      menuIcon.setAttribute("src", "assets/images/icon-menu-close.svg");
+    } else {
+      menuIcon.setAttribute("src", "assets/images/icon-menu.svg");
+    }
+  });
+
+</script>
 
 </body>
 </html>
